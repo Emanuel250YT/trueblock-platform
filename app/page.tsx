@@ -252,10 +252,10 @@ export default function HomePage() {
 
               <div className="lg:w-1/3 relative h-48 lg:h-auto">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vxkFdo8QIbrs2TqisvSAqlEXRl8YtF.png"
+                  src="/financial-markets-positive-trend.png"
                   alt="Gráfico de mercados financieros"
-                  width={400}
-                  height={300}
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover lg:absolute lg:inset-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent to-blue-600/20"></div>
