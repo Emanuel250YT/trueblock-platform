@@ -36,11 +36,11 @@ import { useLocation } from "@/contexts/location-context"
 
 const featuredNews = {
   id: 1,
-  title: "Nueva política económica anunciada por el gobierno para impulsar el crecimiento",
+  title: "New economic policy announced by government to boost growth",
   excerpt:
-    "El gobierno presenta un paquete de medidas económicas que incluye incentivos fiscales y programas de inversión pública para estimular la economía nacional en los próximos meses.",
-  category: "Política",
-  publishedAt: "26 de Junio de 2024",
+    "The government presents an economic package that includes tax incentives and public investment programs to stimulate the national economy in the coming months.",
+  category: "Politics",
+  publishedAt: "June 26, 2024",
   readTime: "5 min",
   image: "/government-economic-policy-announcement.png",
   views: 1250,
@@ -51,100 +51,100 @@ const featuredNews = {
 const sidebarNews = [
   {
     id: 2,
-    title: "Avances tecnológicos revolucionan la industria médica",
-    category: "Tecnología",
-    publishedAt: "hace 2 horas",
+    title: "Technological advances revolutionize the medical industry",
+    category: "Technology",
+    publishedAt: "2 hours ago",
     image: "/medical-technology-innovation.png",
     verificationScore: 96,
   },
   {
     id: 3,
-    title: "Campeonato mundial de fútbol genera expectativas",
-    category: "Deportes",
-    publishedAt: "hace 4 horas",
+    title: "World football championship generates expectations",
+    category: "Sports",
+    publishedAt: "4 hours ago",
     image: "/football-world-championship.png",
     verificationScore: 94,
   },
   {
     id: 4,
-    title: "Cambio climático: nuevas medidas ambientales",
-    category: "Medio Ambiente",
-    publishedAt: "hace 6 horas",
+    title: "Climate change: new environmental measures",
+    category: "Environment",
+    publishedAt: "6 hours ago",
     image: "/climate-change-environmental-measures.png",
     verificationScore: 97,
   },
   {
     id: 5,
-    title: "Mercados financieros muestran tendencia positiva",
-    category: "Economía",
-    publishedAt: "hace 8 horas",
+    title: "Financial markets show positive trend",
+    category: "Economy",
+    publishedAt: "8 hours ago",
     image: "/financial-markets-positive-trend.png",
     verificationScore: 95,
   },
 ]
 
 const categories = [
-  { name: "Todas", active: true, count: 156 },
-  { name: "Política", active: false, count: 42 },
-  { name: "Economía", active: false, count: 38 },
-  { name: "Deportes", active: false, count: 29 },
-  { name: "Tecnología", active: false, count: 31 },
-  { name: "Salud", active: false, count: 16 },
+  { name: "All", active: true, count: 156 },
+  { name: "Politics", active: false, count: 42 },
+  { name: "Economy", active: false, count: 38 },
+  { name: "Sports", active: false, count: 29 },
+  { name: "Technology", active: false, count: 31 },
+  { name: "Health", active: false, count: 16 },
 ]
 
 const recentNews = [
   {
     id: 6,
-    title: "Innovación en energías renovables marca nuevo récord",
-    excerpt: "Las nuevas tecnologías solares y eólicas alcanzan niveles de eficiencia sin precedentes.",
-    category: "Tecnología",
-    publishedAt: "25 de Junio, 2024",
+    title: "Renewable energy innovation sets new record",
+    excerpt: "New solar and wind technologies reach unprecedented efficiency levels.",
+    category: "Technology",
+    publishedAt: "June 25, 2024",
     image: "/renewable-energy-solar-wind-technology.png",
     verificationScore: 99,
     trending: true,
   },
   {
     id: 7,
-    title: "Reforma educativa busca mejorar la calidad académica",
-    excerpt: "El ministerio de educación presenta nuevas directrices para fortalecer el sistema educativo.",
-    category: "Educación",
-    publishedAt: "25 de Junio, 2024",
+    title: "Education reform seeks to improve academic quality",
+    excerpt: "The ministry of education presents new guidelines to strengthen the educational system.",
+    category: "Education",
+    publishedAt: "June 25, 2024",
     image: "/education-reform-academic-quality.png",
     verificationScore: 93,
   },
   {
     id: 8,
-    title: "Descubrimiento científico abre nuevas posibilidades",
-    excerpt: "Investigadores logran avances significativos en el tratamiento de enfermedades complejas.",
-    category: "Ciencia",
-    publishedAt: "24 de Junio, 2024",
+    title: "Scientific discovery opens new possibilities",
+    excerpt: "Researchers achieve significant advances in the treatment of complex diseases.",
+    category: "Science",
+    publishedAt: "June 24, 2024",
     image: "/scientific-discovery-medical-research.png",
     verificationScore: 97,
   },
   {
     id: 9,
-    title: "Infraestructura urbana recibe inversión millonaria",
-    excerpt: "Nuevos proyectos de transporte y conectividad transformarán las principales ciudades.",
-    category: "Urbanismo",
-    publishedAt: "24 de Junio, 2024",
+    title: "Urban infrastructure receives major investment",
+    excerpt: "New transportation and connectivity projects will transform major cities.",
+    category: "Urban Planning",
+    publishedAt: "June 24, 2024",
     image: "/urban-infrastructure-transport-investment.png",
     verificationScore: 91,
   },
   {
     id: 10,
-    title: "Sector turístico experimenta recuperación notable",
-    excerpt: "Las cifras de visitantes superan las expectativas tras la implementación de nuevas estrategias.",
-    category: "Turismo",
-    publishedAt: "23 de Junio, 2024",
+    title: "Tourism sector experiences notable recovery",
+    excerpt: "Visitor numbers exceed expectations after implementing new strategies.",
+    category: "Tourism",
+    publishedAt: "June 23, 2024",
     image: "/tourism-recovery-travel-industry.png",
     verificationScore: 89,
   },
   {
     id: 11,
-    title: "Agricultura sostenible impulsa la producción local",
-    excerpt: "Técnicas innovadoras permiten aumentar la productividad respetando el medio ambiente.",
-    category: "Agricultura",
-    publishedAt: "23 de Junio, 2024",
+    title: "Sustainable agriculture boosts local production",
+    excerpt: "Innovative techniques allow increased productivity while respecting the environment.",
+    category: "Agriculture",
+    publishedAt: "June 23, 2024",
     image: "/sustainable-agriculture-local-production.png",
     verificationScore: 95,
   },
@@ -187,7 +187,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <MobileHeader title="TrueBlock - Noticias Verificadas" />
+      <MobileHeader title="TrueBlock - Verified News" />
 
       <main className="container mx-auto px-4 pt-6 pb-8">
         <div className="md:hidden mb-6">
@@ -206,9 +206,9 @@ export default function HomePage() {
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium">DESTACADA</span>
+                    <span className="text-sm font-medium">FEATURED</span>
                   </div>
-                  <Badge className="bg-green-500 text-white font-semibold px-3 py-1">Economía</Badge>
+                  <Badge className="bg-green-500 text-white font-semibold px-3 py-1">Economy</Badge>
                   <div className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1">
                     <CheckCircle className="h-4 w-4 text-green-400" />
                     <span className="text-sm font-bold">95%</span>
@@ -216,18 +216,17 @@ export default function HomePage() {
                 </div>
 
                 <h1 className="text-2xl lg:text-4xl font-bold mb-4 text-balance leading-tight">
-                  Mercados financieros muestran tendencia positiva
+                  Financial markets show positive trend
                 </h1>
 
                 <p className="text-blue-100 text-base lg:text-lg mb-6 text-pretty leading-relaxed">
-                  Los principales índices bursátiles registran un crecimiento sostenido tras las nuevas políticas
-                  económicas implementadas.
+                  Major stock indices register sustained growth following the implementation of new economic policies.
                 </p>
 
                 <div className="flex flex-wrap items-center gap-3 mb-6 text-sm">
                   <div className="flex items-center space-x-2 text-blue-100">
                     <Clock className="h-4 w-4" />
-                    <span>hace 8h</span>
+                    <span>8h ago</span>
                   </div>
                   <div className="flex items-center space-x-2 text-blue-100">
                     <Eye className="h-4 w-4" />
@@ -245,7 +244,7 @@ export default function HomePage() {
                     console.log("[v0] Abriendo noticia destacada")
                   }}
                 >
-                  Leer completa
+                  Read Full Article
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </div>
@@ -253,7 +252,7 @@ export default function HomePage() {
               <div className="lg:w-1/3 relative h-48 lg:h-auto">
                 <Image
                   src="/financial-markets-positive-trend.png"
-                  alt="Gráfico de mercados financieros"
+                  alt="Financial markets chart"
                   width={800}
                   height={600}
                   className="w-full h-full object-cover lg:absolute lg:inset-0"
@@ -275,7 +274,7 @@ export default function HomePage() {
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Calendar className="h-4 w-4 text-blue-600" />
                 <span className="font-medium">
-                  {locationLoading ? "Cargando..." : location?.currentDate || "Sábado, 26 de Junio"}
+                  {locationLoading ? "Loading..." : location?.currentDate || "Saturday, June 26"}
                 </span>
               </div>
 
@@ -289,8 +288,8 @@ export default function HomePage() {
                   <MapPin className="h-4 w-4 text-green-600" />
                   <span className="font-medium">
                     {locationLoading
-                      ? "Ubicación..."
-                      : `${location?.city}, ${location?.country}` || "Tu Ciudad"}
+                      ? "Location..."
+                      : `${location?.city}, ${location?.country}` || "Your City"}
                   </span>
                 </div>
 
@@ -313,7 +312,7 @@ export default function HomePage() {
 
               <div className="flex items-center space-x-2 text-sm">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-green-600 font-medium">En vivo</span>
+                <span className="text-green-600 font-medium">Live</span>
               </div>
             </div>
 
@@ -323,10 +322,10 @@ export default function HomePage() {
               </div>
               <div className="flex flex-col">
                 <span className="font-semibold text-sm">
-                  {isConnected ? `¡Hola! ${address?.slice(0, 6)}...${address?.slice(-4)}` : "¡Hola! Bienvenido"}
+                  {isConnected ? `Hello! ${address?.slice(0, 6)}...${address?.slice(-4)}` : "Hello! Welcome"}
                 </span>
                 <span className="text-xs text-blue-100">
-                  {isConnected ? "Wallet conectada" : "Noticias verificadas"}
+                  {isConnected ? "Wallet connected" : "Verified news"}
                 </span>
               </div>
               <Button
@@ -335,7 +334,7 @@ export default function HomePage() {
                 onClick={navigateToAuth}
                 disabled={walletLoading}
               >
-                {walletLoading ? "Conectando..." : isConnected ? "Perfil" : "Conectar"}
+                {walletLoading ? "Connecting..." : isConnected ? "Profile" : "Connect"}
               </Button>
             </div>
           </div>
@@ -365,7 +364,7 @@ export default function HomePage() {
                   </Badge>
                   <div className="bg-green-500 text-white px-3 py-1.5 rounded-full text-xs font-bold flex items-center space-x-1">
                     <CheckCircle className="h-3.5 w-3.5" />
-                    <span>{featuredNews.verificationScore}% Verificado</span>
+                    <span>{featuredNews.verificationScore}% Verified</span>
                   </div>
                 </div>
 
@@ -387,11 +386,11 @@ export default function HomePage() {
                     <Clock className="h-4 w-4" />
                     <span>{featuredNews.publishedAt}</span>
                     <span>•</span>
-                    <span>{featuredNews.readTime} lectura</span>
+                    <span>{featuredNews.readTime} read</span>
                   </div>
                   <div className="flex items-center space-x-1 text-sm text-orange-600">
                     <TrendingUp className="h-4 w-4" />
-                    <span className="font-medium">Tendencia</span>
+                    <span className="font-medium">Trending</span>
                   </div>
                 </div>
 
@@ -411,7 +410,7 @@ export default function HomePage() {
                       console.log("[v0] Abriendo artículo:", featuredNews.id)
                     }}
                   >
-                    Leer artículo completo
+                    Read Full Article
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                   <div className="flex items-center space-x-2">
@@ -428,12 +427,12 @@ export default function HomePage() {
                           })
                           .catch(() => {
                             navigator.clipboard.writeText(window.location.href)
-                            alert("Enlace copiado al portapapeles")
+                            alert("Link copied to clipboard")
                           })
                       }}
                     >
                       <Share2 className="h-4 w-4 mr-1" />
-                      Compartir
+                      Share
                     </Button>
                   </div>
                 </div>
@@ -484,7 +483,7 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-center space-x-1 text-sm text-orange-600">
                       <TrendingUp className="h-4 w-4" />
-                      <span className="font-medium">Tendencia</span>
+                      <span className="font-medium">Trending</span>
                     </div>
                   </div>
 
@@ -526,7 +525,7 @@ export default function HomePage() {
                         }}
                       >
                         <Share2 className="h-4 w-4 mr-1" />
-                        Compartir
+                        Share
                       </Button>
                     </div>
                   </div>
@@ -542,10 +541,10 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="flex items-center justify-between">
-              <h2 className="text-xl font-bold text-gray-900">Últimas Noticias</h2>
+              <h2 className="text-xl font-bold text-gray-900">Latest News</h2>
               <div className="flex items-center space-x-1 text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
                 <Shield className="h-3 w-3" />
-                <span className="font-medium">Verificadas</span>
+                <span className="font-medium">Verified</span>
               </div>
             </div>
 
@@ -597,14 +596,14 @@ export default function HomePage() {
                 <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <Shield className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="font-bold text-blue-900 mb-2">¿Por qué TrueBlock?</h3>
+                <h3 className="font-bold text-blue-900 mb-2">Why TrueBlock?</h3>
                 <p className="text-sm text-blue-700 leading-relaxed mb-3">
-                  Cada noticia es verificada con tecnología blockchain para garantizar la veracidad de la información.
+                  Each news is verified with blockchain technology to guarantee the veracity of information.
                 </p>
                 <div className="flex items-center justify-center space-x-4 text-xs text-blue-600">
                   <div className="flex items-center space-x-1">
                     <Users className="h-3 w-3" />
-                    <span>+50K usuarios</span>
+                    <span>+50K users</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <CheckCircle className="h-3 w-3" />
@@ -624,9 +623,9 @@ export default function HomePage() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Proceso de Validación TrueBlock</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">TrueBlock Validation Process</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Cada noticia pasa por nuestro sistema de verificación multicapa para garantizar la máxima veracidad
+              Each news goes through our multilayer verification system to ensure maximum veracity
             </p>
           </div>
 
@@ -654,7 +653,7 @@ export default function HomePage() {
                 <FileText className="h-6 w-6 text-green-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-green-600">Revisión LLM</h3>
-              <p className="text-sm text-gray-600">Evaluación de coherencia y verificación de fuentes</p>
+              <p className="text-sm text-gray-600">Coherence evaluation and source verification</p>
             </motion.div>
 
             <motion.div
@@ -666,8 +665,8 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-6 w-6 text-purple-600" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-purple-600">Comunidad</h3>
-              <p className="text-sm text-gray-600">Validación por expertos y comunidad especializada</p>
+              <h3 className="text-lg font-semibold mb-2 text-purple-600">Community</h3>
+              <p className="text-sm text-gray-600">Validation by experts and specialized community</p>
             </motion.div>
 
             <motion.div
@@ -680,7 +679,7 @@ export default function HomePage() {
                 <Network className="h-6 w-6 text-orange-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-orange-600">Blockchain</h3>
-              <p className="text-sm text-gray-600">Consenso inmutable con pruebas ZK y transparencia total</p>
+              <p className="text-sm text-gray-600">Immutable consensus with ZK proofs and total transparency</p>
             </motion.div>
           </div>
         </motion.section>
@@ -720,9 +719,9 @@ export default function HomePage() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Más Noticias</h2>
+            <h2 className="text-3xl font-bold text-gray-900">More News</h2>
             <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6" onClick={navigateToVerified}>
-              Ver todas las noticias
+              See all news
               <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
           </div>
@@ -753,7 +752,7 @@ export default function HomePage() {
                       {news.trending && (
                         <div className="bg-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
                           <TrendingUp className="h-3 w-3" />
-                          <span>Tendencia</span>
+                          <span>Trending</span>
                         </div>
                       )}
                     </div>
@@ -807,10 +806,10 @@ export default function HomePage() {
                   <Shield className="h-8 w-8 text-white" />
                 </div>
               </div>
-              <CardTitle className="text-4xl font-bold mb-4">Únete a TrueBlock</CardTitle>
+              <CardTitle className="text-4xl font-bold mb-4">Join TrueBlock</CardTitle>
               <CardDescription className="text-white/90 text-xl max-w-2xl mx-auto leading-relaxed">
-                Recibe noticias 100% verificadas con blockchain usando tu seudónimo preferido. Mantén tu privacidad
-                mientras accedes a información confiable y transparente.
+                Receive 100% verified blockchain news using your preferred pseudonym. Keep your privacy
+                while accessing reliable and transparent information.
               </CardDescription>
             </CardHeader>
             <CardContent className="px-8 pb-8">
@@ -836,7 +835,7 @@ export default function HomePage() {
                         className="w-full bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                         onClick={() => {
                           console.log("[v0] Procesando suscripción")
-                          alert("¡Gracias por suscribirte! Recibirás noticias verificadas en tu correo.")
+                          alert("Thanks for subscribing! You will receive verified news in your email.")
                         }}
                       >
                         <Zap className="h-5 w-5 mr-2" />
@@ -849,7 +848,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center space-x-3 bg-white/15 backdrop-blur-sm px-4 py-3 rounded-lg">
                     <CheckCircle className="h-5 w-5 text-green-300 flex-shrink-0" />
-                    <span className="text-sm font-medium text-white">Noticias verificadas con blockchain</span>
+                    <span className="text-sm font-medium text-white">Blockchain verified news</span>
                   </div>
                   <div className="flex items-center space-x-3 bg-white/15 backdrop-blur-sm px-4 py-3 rounded-lg">
                     <Lock className="h-5 w-5 text-green-300 flex-shrink-0" />
@@ -867,8 +866,8 @@ export default function HomePage() {
 
                 <div className="bg-white/15 backdrop-blur-sm rounded-xl p-6 text-center">
                   <p className="text-white/95 text-sm leading-relaxed">
-                    <span className="font-bold text-white">*Suscripción gratuita</span> para usuarios individuales.
-                    Incluye acceso completo al feed de noticias verificadas y funciones básicas de la plataforma.
+                    <span className="font-bold text-white">*Free subscription</span> for individual users.
+                    Includes full access to verified news feed and basic platform features.
                   </p>
                   <p className="text-white/80 text-xs mt-2">
                     Para uso corporativo, acceso a APIs y funciones avanzadas, consulta nuestros

@@ -31,11 +31,11 @@ export default function VerificadasPage() {
   const verifiedNews = [
     {
       id: 1,
-      title: "Reforma fiscal aprobada por mayoría parlamentaria tras intenso debate",
+      title: "Tax reform approved by parliamentary majority after intense debate",
       excerpt:
-        "El congreso aprueba la nueva reforma fiscal con 67% de votos a favor, incluyendo cambios en tributación empresarial y personal.",
+        "Congress approves the new tax reform with 67% of votes in favor, including changes in corporate and personal taxation.",
       verificationScore: 98,
-      category: "Política",
+      category: "Politics",
       readTime: "5 min",
       views: "24.8K",
       trend: "trending",
@@ -49,21 +49,21 @@ export default function VerificadasPage() {
         blockchain: true,
       },
       validators: 45,
-      confidence: "Muy Alta",
+      confidence: "Very High",
     },
     {
       id: 2,
-      title: "Avance médico: Nueva terapia génica muestra 95% de efectividad",
+      title: "Medical breakthrough: New gene therapy shows 95% effectiveness",
       excerpt:
-        "Ensayos clínicos confirman la efectividad de la nueva terapia génica para tratar enfermedades raras, beneficiando a miles de pacientes.",
+        "Clinical trials confirm the effectiveness of the new gene therapy for treating rare diseases, benefiting thousands of patients.",
       verificationScore: 96,
-      category: "Tecnología",
+      category: "Technology",
       readTime: "6 min",
       views: "18.3K",
       trend: "hot",
       image: "/medical-technology-innovation.png",
-      publishedAt: "Hace 2 horas",
-      source: "Fuente Verificada",
+      publishedAt: "2 hours ago",
+      source: "Verified Source",
       verificationSteps: {
         ai: true,
         llm: true,
@@ -71,21 +71,21 @@ export default function VerificadasPage() {
         blockchain: true,
       },
       validators: 38,
-      confidence: "Muy Alta",
+      confidence: "Very High",
     },
     {
       id: 3,
-      title: "Mercados globales registran crecimiento sostenido del 4.2%",
+      title: "Global markets register sustained growth of 4.2%",
       excerpt:
-        "Los principales índices bursátiles mundiales muestran una tendencia positiva consolidada, impulsada por el sector tecnológico.",
+        "Major world stock indices show a consolidated positive trend, driven by the technology sector.",
       verificationScore: 94,
-      category: "Economía",
+      category: "Economy",
       readTime: "4 min",
       views: "15.7K",
       trend: "rising",
       image: "/financial-markets-positive-trend.png",
-      publishedAt: "Hace 3 horas",
-      source: "Fuente Verificada",
+      publishedAt: "3 hours ago",
+      source: "Verified Source",
       verificationSteps: {
         ai: true,
         llm: true,
@@ -93,21 +93,21 @@ export default function VerificadasPage() {
         blockchain: true,
       },
       validators: 42,
-      confidence: "Alta",
+      confidence: "High",
     },
     {
       id: 4,
-      title: "Copa Mundial: Selección nacional clasifica a semifinales",
+      title: "World Cup: National team qualifies for semifinals",
       excerpt:
-        "Victoria histórica 3-1 asegura el pase a semifinales del mundial, generando celebraciones masivas en todo el país.",
+        "Historic 3-1 victory secures passage to World Cup semifinals, generating massive celebrations throughout the country.",
       verificationScore: 99,
-      category: "Deportes",
+      category: "Sports",
       readTime: "3 min",
       views: "32.1K",
       trend: "trending",
       image: "/football-world-championship.png",
-      publishedAt: "Hace 4 horas",
-      source: "Fuente Verificada",
+      publishedAt: "4 hours ago",
+      source: "Verified Source",
       verificationSteps: {
         ai: true,
         llm: true,
@@ -115,7 +115,7 @@ export default function VerificadasPage() {
         blockchain: true,
       },
       validators: 56,
-      confidence: "Muy Alta",
+      confidence: "Very High",
     },
   ]
 
@@ -142,11 +142,11 @@ export default function VerificadasPage() {
             <div className="p-2 bg-green-100 rounded-lg">
               <CheckCircle className="h-6 w-6 text-green-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">Noticias Verificadas</h1>
+            <h1 className="text-3xl font-bold text-slate-900">Verified News</h1>
           </div>
           <p className="text-lg text-slate-600 max-w-3xl mb-6">
-            Todas las noticias han pasado por nuestro proceso de verificación multicapa: Oráculos IA, Revisión LLM,
-            Validación Comunitaria y Consenso Blockchain.
+            All news has gone through our multilayer verification process: AI Oracles, LLM Review,
+            Community Validation and Blockchain Consensus.
           </p>
 
           {/* Real-time Stats */}
@@ -154,28 +154,28 @@ export default function VerificadasPage() {
             <div className="bg-green-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <CheckCircle className="h-5 w-5 text-green-600" />
-                <span className="text-sm font-medium text-green-700">Verificadas Hoy</span>
+                <span className="text-sm font-medium text-green-700">Verified Today</span>
               </div>
               <div className="text-2xl font-bold text-green-900">247</div>
             </div>
             <div className="bg-blue-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <Users className="h-5 w-5 text-blue-600" />
-                <span className="text-sm font-medium text-blue-700">Validadores Activos</span>
+                <span className="text-sm font-medium text-blue-700">Active Validators</span>
               </div>
               <div className="text-2xl font-bold text-blue-900">523</div>
             </div>
             <div className="bg-orange-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <BarChart3 className="h-5 w-5 text-orange-600" />
-                <span className="text-sm font-medium text-orange-700">Precisión Promedio</span>
+                <span className="text-sm font-medium text-orange-700">Average Accuracy</span>
               </div>
               <div className="text-2xl font-bold text-orange-900">96.8%</div>
             </div>
             <div className="bg-purple-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-2">
                 <Zap className="h-5 w-5 text-purple-600" />
-                <span className="text-sm font-medium text-purple-700">Tiempo Promedio</span>
+                <span className="text-sm font-medium text-purple-700">Average Time</span>
               </div>
               <div className="text-2xl font-bold text-purple-900">12 min</div>
             </div>
@@ -188,7 +188,7 @@ export default function VerificadasPage() {
         <div className="bg-white rounded-lg p-6 shadow-sm border border-slate-200">
           <div className="flex items-center gap-2 mb-4">
             <Filter className="h-5 w-5 text-slate-600" />
-            <h3 className="font-semibold text-slate-900">Filtros Avanzados</h3>
+            <h3 className="font-semibold text-slate-900">Advanced Filters</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -196,7 +196,7 @@ export default function VerificadasPage() {
             <div className="relative">
               <Search className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
               <Input
-                placeholder="Buscar noticias..."
+                placeholder="Search news..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -206,51 +206,51 @@ export default function VerificadasPage() {
             {/* Category Filter */}
             <Select value={selectedCategory} onValueChange={setSelectedCategory}>
               <SelectTrigger>
-                <SelectValue placeholder="Categoría" />
+                <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">Todas las categorías</SelectItem>
-                <SelectItem value="política">Política</SelectItem>
-                <SelectItem value="economía">Economía</SelectItem>
-                <SelectItem value="deportes">Deportes</SelectItem>
-                <SelectItem value="tecnología">Tecnología</SelectItem>
+                <SelectItem value="all">All categories</SelectItem>
+                <SelectItem value="politics">Politics</SelectItem>
+                <SelectItem value="economy">Economy</SelectItem>
+                <SelectItem value="sports">Sports</SelectItem>
+                <SelectItem value="technology">Technology</SelectItem>
               </SelectContent>
             </Select>
 
             {/* Verification Level Filter */}
             <Select value={selectedVerification} onValueChange={setSelectedVerification}>
               <SelectTrigger>
-                <SelectValue placeholder="Nivel de Verificación" />
+                <SelectValue placeholder="Verification Level" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">Todos los niveles</SelectItem>
-                <SelectItem value="high">Muy Alta (95%+)</SelectItem>
-                <SelectItem value="medium">Alta (90-94%)</SelectItem>
-                <SelectItem value="verified">Verificada (85%+)</SelectItem>
+                <SelectItem value="all">All levels</SelectItem>
+                <SelectItem value="high">Very High (95%+)</SelectItem>
+                <SelectItem value="medium">High (90-94%)</SelectItem>
+                <SelectItem value="verified">Verified (85%+)</SelectItem>
               </SelectContent>
             </Select>
 
             {/* Date Filter */}
             <Select value={selectedDate} onValueChange={setSelectedDate}>
               <SelectTrigger>
-                <SelectValue placeholder="Fecha" />
+                <SelectValue placeholder="Date" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">Todas las fechas</SelectItem>
-                <SelectItem value="today">Hoy</SelectItem>
-                <SelectItem value="week">Esta semana</SelectItem>
-                <SelectItem value="month">Este mes</SelectItem>
+                <SelectItem value="all">All dates</SelectItem>
+                <SelectItem value="today">Today</SelectItem>
+                <SelectItem value="week">This week</SelectItem>
+                <SelectItem value="month">This month</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div className="flex items-center justify-between mt-4 pt-4 border-t border-slate-200">
             <span className="text-sm text-slate-600">
-              Mostrando {filteredNews.length} de {verifiedNews.length} noticias verificadas
+              Showing {filteredNews.length} of {verifiedNews.length} verified news
             </span>
             <Button variant="outline" size="sm">
               <Calendar className="h-4 w-4 mr-2" />
-              Exportar Resultados
+              Export Results
             </Button>
           </div>
         </div>
@@ -324,7 +324,7 @@ export default function VerificadasPage() {
                       <div
                         className={`w-2 h-2 rounded-full ${news.verificationSteps.community ? "bg-green-500" : "bg-slate-300"}`}
                       ></div>
-                      <span className="text-xs text-slate-600">Comunidad</span>
+                      <span className="text-xs text-slate-600">Community</span>
                     </div>
                     <div className="flex items-center gap-1">
                       <div
@@ -347,7 +347,7 @@ export default function VerificadasPage() {
                       </span>
                       <span className="flex items-center gap-1">
                         <Users className="h-3 w-3" />
-                        {news.validators} validadores
+                        {news.validators} validators
                       </span>
                     </div>
                     <span>{news.publishedAt}</span>
@@ -356,7 +356,7 @@ export default function VerificadasPage() {
                   <div className="flex items-center justify-between mt-3">
                     <span className="text-xs font-medium text-green-600">{news.source}</span>
                     <Button size="sm" variant="outline" className="hover:bg-blue-50 bg-transparent">
-                      Ver Detalles
+                      View Details
                     </Button>
                   </div>
                 </div>
@@ -368,7 +368,7 @@ export default function VerificadasPage() {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="px-8 bg-transparent">
-            Cargar más noticias verificadas
+            Load more verified news
           </Button>
         </div>
       </div>

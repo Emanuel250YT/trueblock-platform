@@ -7,45 +7,45 @@ export default function EconomiaPage() {
   const economicNews = [
     {
       id: 1,
-      title: "Mercados financieros muestran tendencia positiva tras anuncios del banco central",
+      title: "Financial markets show positive trend after central bank announcements",
       excerpt:
-        "Los índices bursátiles registran un crecimiento del 3.2% después de las declaraciones sobre política monetaria y tasas de interés.",
+        "Stock indices register 3.2% growth following statements on monetary policy and interest rates.",
       verificationScore: 96,
-      category: "Economía",
+      category: "Economy",
       readTime: "4 min",
       views: "18.7K",
       trend: "trending",
       image: "/financial-markets-positive-trend.png",
-      publishedAt: "Hace 1 hora",
-      source: "Fuente Verificada",
+      publishedAt: "1 hour ago",
+      source: "Verified Source",
     },
     {
       id: 2,
-      title: "Inflación anual se mantiene en 2.8% según últimos datos oficiales",
+      title: "Annual inflation remains at 2.8% according to latest official data",
       excerpt:
-        "El índice de precios al consumidor muestra estabilidad, cumpliendo con las proyecciones del gobierno para el trimestre actual.",
+        "The consumer price index shows stability, meeting government projections for the current quarter.",
       verificationScore: 98,
-      category: "Economía",
+      category: "Economy",
       readTime: "3 min",
       views: "14.2K",
       trend: "hot",
       image: "/inflation-data-analysis.png",
-      publishedAt: "Hace 3 horas",
-      source: "Fuente Verificada",
+      publishedAt: "3 hours ago",
+      source: "Verified Source",
     },
     {
       id: 3,
-      title: "Sector tecnológico lidera crecimiento económico con 15% de expansión",
+      title: "Technology sector leads economic growth with 15% expansion",
       excerpt:
-        "Las empresas de tecnología impulsan el PIB nacional, generando más de 200,000 empleos directos en el último año.",
+        "Technology companies drive national GDP, generating over 200,000 direct jobs in the last year.",
       verificationScore: 93,
-      category: "Economía",
+      category: "Economy",
       readTime: "5 min",
       views: "11.8K",
       trend: "rising",
       image: "/tech-sector-growth.png",
-      publishedAt: "Hace 5 horas",
-      source: "Fuente Verificada",
+      publishedAt: "5 hours ago",
+      source: "Verified Source",
     },
   ]
 
@@ -58,26 +58,25 @@ export default function EconomiaPage() {
             <div className="p-2 bg-green-100 rounded-lg">
               <DollarSign className="h-6 w-6 text-green-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">Economía</h1>
+            <h1 className="text-3xl font-bold text-slate-900">Economy</h1>
           </div>
           <p className="text-lg text-slate-600 max-w-3xl">
-            Información económica verificada y confiable. Análisis de mercados, indicadores financieros y noticias que
-            impactan la economía nacional e internacional.
+            Verified and reliable economic information. Market analysis, financial indicators and news that impact the national and international economy.
           </p>
 
           {/* Stats */}
           <div className="flex items-center gap-6 mt-6">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-green-600" />
-              <span className="text-sm font-medium text-slate-700">892 noticias verificadas</span>
+              <span className="text-sm font-medium text-slate-700">892 verified news</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-blue-600" />
-              <span className="text-sm font-medium text-slate-700">67 validadores activos</span>
+              <span className="text-sm font-medium text-slate-700">67 active validators</span>
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-orange-600" />
-              <span className="text-sm font-medium text-slate-700">Tendencia: Mercados alcistas</span>
+              <span className="text-sm font-medium text-slate-700">Trend: Bull markets</span>
             </div>
           </div>
         </div>
@@ -87,22 +86,22 @@ export default function EconomiaPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-wrap gap-3">
           <Button variant="default" size="sm">
-            Todas
+            All
           </Button>
           <Button variant="outline" size="sm">
-            Mercados
+            Markets
           </Button>
           <Button variant="outline" size="sm">
-            Banca
+            Banking
           </Button>
           <Button variant="outline" size="sm">
-            Criptomonedas
+            Cryptocurrency
           </Button>
           <Button variant="outline" size="sm">
-            Empresas
+            Companies
           </Button>
           <Button variant="outline" size="sm">
-            Internacional
+            International
           </Button>
         </div>
       </div>
@@ -128,7 +127,7 @@ export default function EconomiaPage() {
                   {news.trend === "trending" && (
                     <Badge variant="secondary" className="bg-red-500 text-white">
                       <TrendingUp className="h-3 w-3 mr-1" />
-                      Tendencia
+                      Trending
                     </Badge>
                   )}
                 </div>
@@ -166,7 +165,7 @@ export default function EconomiaPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-green-600">{news.source}</span>
                   <Button size="sm" variant="outline" className="hover:bg-green-50 bg-transparent">
-                    Leer más
+                    Read more
                   </Button>
                 </div>
               </CardContent>
@@ -177,7 +176,7 @@ export default function EconomiaPage() {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="px-8 bg-transparent">
-            Cargar más noticias
+            Load more news
           </Button>
         </div>
       </div>

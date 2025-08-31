@@ -16,7 +16,7 @@ import { apiClient } from "@/lib/api"
 
 export default function TasksPage() {
   const { data: tasks, loading, error, loadTasks, updateTask } = useTasks()
-  const [filteredTasks, setFilteredTasks] = useState([])
+  const [filteredTasks, setFilteredTasks] = useState<any[]>([])
   const [searchQuery, setSearchQuery] = useState("")
   const [statusFilter, setStatusFilter] = useState("all")
   const [categoryFilter, setCategoryFilter] = useState("all")
@@ -34,7 +34,7 @@ export default function TasksPage() {
   }, [tasks])
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString("es-ES", {
+    return new Date(dateString).toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
       day: "numeric",
@@ -76,7 +76,7 @@ export default function TasksPage() {
       console.error("[v0] Error exporting tasks:", error)
       if (filteredTasks && filteredTasks.length > 0) {
         const csv = [
-          "ID,Título,URL,Estado,Categoría,Creado,Actualizado",
+          "ID,Title,URL,Status,Category,Created,Updated",
           ...filteredTasks.map(
             (task) =>
               `${task.id},"${task.title}","${task.url}",${task.status},${task.category},${task.createdAt},${task.updatedAt}`,
@@ -112,7 +112,7 @@ export default function TasksPage() {
         <MainNav />
         <main className="container mx-auto px-4 py-8">
           <div className="text-center py-12">
-            <p className="text-destructive mb-4">Error cargando las tareas: {error}</p>
+            <p className="text-destructive mb-4">Error loading tasks: {error}</p>
             <Button onClick={() => loadTasks()}>Reintentar</Button>
           </div>
         </main>
@@ -128,18 +128,18 @@ export default function TasksPage() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
-            <h1 className="text-2xl sm:text-3xl font-bold mb-2">Mis Verificaciones</h1>
-            <p className="text-muted-foreground">Gestiona y monitorea todas tus solicitudes de verificación</p>
+            <h1 className="text-2xl sm:text-3xl font-bold mb-2">My Verifications</h1>
+            <p className="text-muted-foreground">Manage and monitor all your verification requests</p>
           </div>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <Button variant="outline" onClick={exportTasks} className="w-full sm:w-auto bg-transparent">
               <Download className="h-4 w-4 mr-2" />
-              Exportar
+              Export
             </Button>
             <Button asChild className="w-full sm:w-auto">
               <Link href="/submit">
                 <Plus className="h-4 w-4 mr-2" />
-                Nueva Verificación
+                New Verification
               </Link>
             </Button>
           </div>
@@ -156,7 +156,7 @@ export default function TasksPage() {
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <Input
-                    placeholder="Buscar por título, dominio o URL..."
+                    placeholder="Search by title, domain or URL..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleSearch()}
@@ -167,10 +167,10 @@ export default function TasksPage() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <Select value={statusFilter} onValueChange={setStatusFilter}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Estado" />
+                    <SelectValue placeholder="Status" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">Todos los estados</SelectItem>
+                    <SelectItem value="all">All statuses</SelectItem>
                     <SelectItem value="pending">Pendiente</SelectItem>
                     <SelectItem value="processing">En proceso</SelectItem>
                     <SelectItem value="completed">Completado</SelectItem>
@@ -178,10 +178,10 @@ export default function TasksPage() {
                 </Select>
                 <Select value={categoryFilter} onValueChange={setCategoryFilter}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Categoría" />
+                    <SelectValue placeholder="Category" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">Todas las categorías</SelectItem>
+                    <SelectItem value="all">All categories</SelectItem>
                     <SelectItem value="Política">Política</SelectItem>
                     <SelectItem value="Ciencia">Ciencia</SelectItem>
                     <SelectItem value="Deportes">Deportes</SelectItem>
@@ -190,7 +190,7 @@ export default function TasksPage() {
                 </Select>
                 <Button onClick={handleSearch}>
                   <Filter className="h-4 w-4 mr-2" />
-                  Filtrar
+                  Filter
                 </Button>
               </div>
             </div>
@@ -201,7 +201,7 @@ export default function TasksPage() {
         <Card>
           <CardHeader>
             <CardTitle className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <span>Verificaciones ({filteredTasks?.length || 0})</span>
+              <span>Verifications ({filteredTasks?.length || 0})</span>
               <Badge variant="outline">{filteredTasks?.length || 0} resultados</Badge>
             </CardTitle>
           </CardHeader>
@@ -209,7 +209,7 @@ export default function TasksPage() {
             {loading ? (
               <div className="flex items-center justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin text-primary" />
-                <span className="ml-2 text-muted-foreground">Cargando tareas...</span>
+                <span className="ml-2 text-muted-foreground">Loading tasks...</span>
               </div>
             ) : (
               <div className="space-y-4">
@@ -229,8 +229,8 @@ export default function TasksPage() {
                         <h3 className="font-medium text-sm mb-2 line-clamp-2">{task.title}</h3>
                         <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs text-muted-foreground">
                           <span>ID: {task.id}</span>
-                          <span>Creado: {formatDate(task.createdAt || task.created_at)}</span>
-                          <span>Actualizado: {formatDate(task.updatedAt || task.updated_at)}</span>
+                          <span>Created: {formatDate(task.createdAt || task.created_at)}</span>
+                          <span>Updated: {formatDate(task.updatedAt || task.updated_at)}</span>
                         </div>
                       </div>
 

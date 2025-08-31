@@ -7,45 +7,45 @@ export default function PoliticaPage() {
   const politicalNews = [
     {
       id: 1,
-      title: "Nueva reforma fiscal propuesta por el gobierno genera debate en el congreso",
+      title: "New tax reform proposed by government generates debate in congress",
       excerpt:
-        "La propuesta incluye cambios significativos en la tributación de empresas y personas naturales, con el objetivo de aumentar la recaudación en un 15%.",
+        "The proposal includes significant changes in taxation for companies and individuals, aiming to increase revenue by 15%.",
       verificationScore: 94,
-      category: "Política",
+      category: "Politics",
       readTime: "5 min",
       views: "12.5K",
       trend: "trending",
       image: "/government-economic-policy-announcement.png",
-      publishedAt: "Hace 2 horas",
-      source: "Fuente Verificada",
+      publishedAt: "2 hours ago",
+      source: "Verified Source",
     },
     {
       id: 2,
-      title: "Acuerdo bipartidista alcanzado para la ley de transparencia gubernamental",
+      title: "Bipartisan agreement reached for government transparency law",
       excerpt:
-        "Después de meses de negociaciones, los partidos políticos llegan a un consenso sobre nuevas medidas de transparencia y rendición de cuentas.",
+        "After months of negotiations, political parties reach consensus on new transparency and accountability measures.",
       verificationScore: 97,
-      category: "Política",
+      category: "Politics",
       readTime: "4 min",
       views: "8.3K",
       trend: "hot",
       image: "/political-agreement-transparency.png",
-      publishedAt: "Hace 4 horas",
-      source: "Fuente Verificada",
+      publishedAt: "4 hours ago",
+      source: "Verified Source",
     },
     {
       id: 3,
-      title: "Ministro de Economía presenta plan de recuperación post-pandemia",
+      title: "Economy Minister presents post-pandemic recovery plan",
       excerpt:
-        "El plan incluye inversiones en infraestructura, apoyo a pequeñas empresas y programas de empleo juvenil por un valor de $50 mil millones.",
+        "The plan includes infrastructure investments, support for small businesses and youth employment programs worth $50 billion.",
       verificationScore: 91,
-      category: "Política",
+      category: "Politics",
       readTime: "6 min",
       views: "15.2K",
       trend: "rising",
       image: "/economic-recovery-plan.png",
-      publishedAt: "Hace 6 horas",
-      source: "Fuente Verificada",
+      publishedAt: "6 hours ago",
+      source: "Verified Source",
     },
   ]
 
@@ -58,26 +58,25 @@ export default function PoliticaPage() {
             <div className="p-2 bg-blue-100 rounded-lg">
               <Shield className="h-6 w-6 text-blue-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">Política</h1>
+            <h1 className="text-3xl font-bold text-slate-900">Politics</h1>
           </div>
           <p className="text-lg text-slate-600 max-w-3xl">
-            Noticias políticas verificadas con blockchain. Información confiable sobre gobierno, políticas públicas y
-            decisiones que afectan a la sociedad.
+            Blockchain-verified political news. Reliable information about government, public policies and decisions that affect society.
           </p>
 
           {/* Stats */}
           <div className="flex items-center gap-6 mt-6">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-green-600" />
-              <span className="text-sm font-medium text-slate-700">1,247 noticias verificadas</span>
+              <span className="text-sm font-medium text-slate-700">1,247 verified news</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-blue-600" />
-              <span className="text-sm font-medium text-slate-700">89 validadores activos</span>
+              <span className="text-sm font-medium text-slate-700">89 active validators</span>
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-orange-600" />
-              <span className="text-sm font-medium text-slate-700">Tendencia: Alta actividad</span>
+              <span className="text-sm font-medium text-slate-700">Trend: High activity</span>
             </div>
           </div>
         </div>
@@ -87,22 +86,22 @@ export default function PoliticaPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-wrap gap-3">
           <Button variant="default" size="sm">
-            Todas
+            All
           </Button>
           <Button variant="outline" size="sm">
-            Gobierno
+            Government
           </Button>
           <Button variant="outline" size="sm">
-            Congreso
+            Congress
           </Button>
           <Button variant="outline" size="sm">
-            Elecciones
+            Elections
           </Button>
           <Button variant="outline" size="sm">
-            Políticas Públicas
+            Public Policies
           </Button>
           <Button variant="outline" size="sm">
-            Internacional
+            International
           </Button>
         </div>
       </div>
@@ -128,7 +127,7 @@ export default function PoliticaPage() {
                   {news.trend === "trending" && (
                     <Badge variant="secondary" className="bg-red-500 text-white">
                       <TrendingUp className="h-3 w-3 mr-1" />
-                      Tendencia
+                      Trending
                     </Badge>
                   )}
                 </div>
@@ -166,7 +165,7 @@ export default function PoliticaPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-blue-600">{news.source}</span>
                   <Button size="sm" variant="outline" className="hover:bg-blue-50 bg-transparent">
-                    Leer más
+                    Read more
                   </Button>
                 </div>
               </CardContent>
@@ -177,7 +176,7 @@ export default function PoliticaPage() {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="px-8 bg-transparent">
-            Cargar más noticias
+            Load more news
           </Button>
         </div>
       </div>

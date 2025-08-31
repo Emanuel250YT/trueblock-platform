@@ -14,11 +14,11 @@ import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav"
 import { MobileOptimizations } from "@/components/ui/mobile-optimizations"
 
 export const metadata: Metadata = {
-  title: "TrueBlock - Noticias Verificadas con Blockchain",
+  title: "TrueBlock - Blockchain-Verified News",
   description:
-    "Mantente informado con noticias 100% verificadas usando tecnología blockchain. Transparencia, veracidad y confianza en cada noticia.",
+    "Stay informed with 100% verified news using blockchain technology. Transparency, truth, and trust in every story.",
   generator: "TrueBlock",
-  keywords: ["noticias", "blockchain", "verificadas", "transparencia", "confianza", "veracidad"],
+  keywords: ["news", "blockchain", "verified", "transparency", "trust", "truth"],
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   themeColor: "#2563eb",
   appleWebApp: {

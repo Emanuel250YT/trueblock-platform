@@ -3,49 +3,49 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Shield, CheckCircle, Clock, TrendingUp, Users, Eye, Trophy } from "lucide-react"
 
-export default function DeportesPage() {
+export default function SportsPage() {
   const sportsNews = [
     {
       id: 1,
-      title: "Mundial de Fútbol 2024: Selección nacional avanza a cuartos de final",
+      title: "FIFA World Cup 2024: National team advances to quarterfinals",
       excerpt:
-        "Con una victoria 2-1 sobre el equipo rival, la selección asegura su lugar en la siguiente ronda del campeonato mundial.",
+        "With a 2-1 victory over the rival team, the national team secures its place in the next round of the world championship.",
       verificationScore: 99,
-      category: "Deportes",
+      category: "Sports",
       readTime: "3 min",
       views: "25.4K",
       trend: "trending",
       image: "/football-world-championship.png",
-      publishedAt: "Hace 30 min",
-      source: "Fuente Verificada",
+      publishedAt: "30 minutes ago",
+      source: "Verified Source",
     },
     {
       id: 2,
-      title: "Récord mundial en natación: Nueva marca en los 100 metros libres",
+      title: "World swimming record: New mark in 100-meter freestyle",
       excerpt:
-        "El nadador establece un nuevo récord mundial con un tiempo de 46.86 segundos, superando la marca anterior por 0.12 segundos.",
+        "The swimmer sets a new world record with a time of 46.86 seconds, beating the previous mark by 0.12 seconds.",
       verificationScore: 97,
-      category: "Deportes",
+      category: "Sports",
       readTime: "2 min",
       views: "19.8K",
       trend: "hot",
       image: "/swimming-world-record.png",
-      publishedAt: "Hace 2 horas",
-      source: "Fuente Verificada",
+      publishedAt: "2 hours ago",
+      source: "Verified Source",
     },
     {
       id: 3,
-      title: "Liga Nacional: Clásico del fútbol termina en empate histórico",
+      title: "National League: Football classic ends in historic tie",
       excerpt:
-        "El partido más esperado del año culmina 3-3 en un encuentro lleno de emociones y jugadas espectaculares que mantuvo en vilo a los aficionados.",
+        "The most anticipated match of the year culminates 3-3 in an encounter full of emotions and spectacular plays that kept fans on edge.",
       verificationScore: 95,
-      category: "Deportes",
+      category: "Sports",
       readTime: "4 min",
       views: "31.2K",
       trend: "rising",
       image: "/football-classic-match.png",
-      publishedAt: "Hace 4 horas",
-      source: "Fuente Verificada",
+      publishedAt: "4 hours ago",
+      source: "Verified Source",
     },
   ]
 
@@ -58,26 +58,25 @@ export default function DeportesPage() {
             <div className="p-2 bg-orange-100 rounded-lg">
               <Trophy className="h-6 w-6 text-orange-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">Deportes</h1>
+            <h1 className="text-3xl font-bold text-slate-900">Sports</h1>
           </div>
           <p className="text-lg text-slate-600 max-w-3xl">
-            Noticias deportivas verificadas al instante. Resultados, análisis y cobertura completa de todos los deportes
-            con información 100% confiable.
+            Sports news verified instantly. Results, analysis and complete coverage of all sports with 100% reliable information.
           </p>
 
           {/* Stats */}
           <div className="flex items-center gap-6 mt-6">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-green-600" />
-              <span className="text-sm font-medium text-slate-700">2,156 noticias verificadas</span>
+              <span className="text-sm font-medium text-slate-700">2,156 verified news</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-blue-600" />
-              <span className="text-sm font-medium text-slate-700">134 validadores activos</span>
+              <span className="text-sm font-medium text-slate-700">134 active validators</span>
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-orange-600" />
-              <span className="text-sm font-medium text-slate-700">Tendencia: Mundial en curso</span>
+              <span className="text-sm font-medium text-slate-700">Trend: World Cup in progress</span>
             </div>
           </div>
         </div>
@@ -87,19 +86,19 @@ export default function DeportesPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-wrap gap-3">
           <Button variant="default" size="sm">
-            Todas
+            All
           </Button>
           <Button variant="outline" size="sm">
-            Fútbol
+            Football
           </Button>
           <Button variant="outline" size="sm">
-            Baloncesto
+            Basketball
           </Button>
           <Button variant="outline" size="sm">
-            Tenis
+            Tennis
           </Button>
           <Button variant="outline" size="sm">
-            Natación
+            Swimming
           </Button>
           <Button variant="outline" size="sm">
             Atletismo
@@ -128,7 +127,7 @@ export default function DeportesPage() {
                   {news.trend === "trending" && (
                     <Badge variant="secondary" className="bg-red-500 text-white">
                       <TrendingUp className="h-3 w-3 mr-1" />
-                      Tendencia
+                      Trending
                     </Badge>
                   )}
                 </div>
@@ -166,7 +165,7 @@ export default function DeportesPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-orange-600">{news.source}</span>
                   <Button size="sm" variant="outline" className="hover:bg-orange-50 bg-transparent">
-                    Leer más
+                    Read more
                   </Button>
                 </div>
               </CardContent>
@@ -177,7 +176,7 @@ export default function DeportesPage() {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="px-8 bg-transparent">
-            Cargar más noticias
+            Load more news
           </Button>
         </div>
       </div>

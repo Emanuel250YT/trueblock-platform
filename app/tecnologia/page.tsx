@@ -3,49 +3,49 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Shield, CheckCircle, Clock, TrendingUp, Users, Eye, Cpu } from "lucide-react"
 
-export default function TecnologiaPage() {
+export default function TechnologyPage() {
   const techNews = [
     {
       id: 1,
-      title: "Avance revolucionario en inteligencia artificial mejora diagnósticos médicos",
+      title: "Revolutionary advance in artificial intelligence improves medical diagnoses",
       excerpt:
-        "Nuevo algoritmo de IA logra 98% de precisión en detección temprana de enfermedades, superando a métodos tradicionales.",
+        "New AI algorithm achieves 98% accuracy in early disease detection, surpassing traditional methods.",
       verificationScore: 96,
-      category: "Tecnología",
+      category: "Technology",
       readTime: "5 min",
       views: "22.1K",
       trend: "trending",
       image: "/medical-technology-innovation.png",
-      publishedAt: "Hace 1 hora",
-      source: "Fuente Verificada",
+      publishedAt: "1 hour ago",
+      source: "Verified Source",
     },
     {
       id: 2,
-      title: "Energía renovable: Nueva tecnología solar aumenta eficiencia al 45%",
+      title: "Renewable energy: New solar technology increases efficiency to 45%",
       excerpt:
-        "Investigadores desarrollan células solares de perovskita que duplican la eficiencia de los paneles convencionales.",
+        "Researchers develop perovskite solar cells that double the efficiency of conventional panels.",
       verificationScore: 94,
-      category: "Tecnología",
+      category: "Technology",
       readTime: "4 min",
       views: "16.8K",
       trend: "hot",
       image: "/renewable-energy-solar-wind-technology.png",
-      publishedAt: "Hace 3 horas",
-      source: "Fuente Verificada",
+      publishedAt: "3 hours ago",
+      source: "Verified Source",
     },
     {
       id: 3,
-      title: "Blockchain revoluciona la cadena de suministro global",
+      title: "Blockchain revolutionizes global supply chain",
       excerpt:
-        "Grandes corporaciones adoptan tecnología blockchain para garantizar transparencia y trazabilidad en sus productos.",
+        "Major corporations adopt blockchain technology to ensure transparency and traceability in their products.",
       verificationScore: 92,
-      category: "Tecnología",
+      category: "Technology",
       readTime: "6 min",
       views: "13.5K",
       trend: "rising",
       image: "/blockchain-supply-chain.png",
-      publishedAt: "Hace 5 horas",
-      source: "Fuente Verificada",
+      publishedAt: "5 hours ago",
+      source: "Verified Source",
     },
   ]
 
@@ -58,26 +58,26 @@ export default function TecnologiaPage() {
             <div className="p-2 bg-purple-100 rounded-lg">
               <Cpu className="h-6 w-6 text-purple-600" />
             </div>
-            <h1 className="text-3xl font-bold text-slate-900">Tecnología</h1>
+            <h1 className="text-3xl font-bold text-slate-900">Technology</h1>
           </div>
           <p className="text-lg text-slate-600 max-w-3xl">
-            Las últimas innovaciones tecnológicas verificadas. Inteligencia artificial, blockchain, energías renovables
-            y avances que transforman nuestro futuro.
+            The latest verified technological innovations. Artificial intelligence, blockchain, renewable energy
+            and advances that transform our future.
           </p>
 
           {/* Stats */}
           <div className="flex items-center gap-6 mt-6">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-5 w-5 text-green-600" />
-              <span className="text-sm font-medium text-slate-700">1,543 noticias verificadas</span>
+              <span className="text-sm font-medium text-slate-700">1,543 verified news</span>
             </div>
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5 text-blue-600" />
-              <span className="text-sm font-medium text-slate-700">156 validadores activos</span>
+              <span className="text-sm font-medium text-slate-700">156 active validators</span>
             </div>
             <div className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5 text-orange-600" />
-              <span className="text-sm font-medium text-slate-700">Tendencia: IA en auge</span>
+              <span className="text-sm font-medium text-slate-700">Trend: AI booming</span>
             </div>
           </div>
         </div>
@@ -87,22 +87,22 @@ export default function TecnologiaPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="flex flex-wrap gap-3">
           <Button variant="default" size="sm">
-            Todas
+            All
           </Button>
           <Button variant="outline" size="sm">
-            IA
+            AI
           </Button>
           <Button variant="outline" size="sm">
             Blockchain
           </Button>
           <Button variant="outline" size="sm">
-            Energía
+            Energy
           </Button>
           <Button variant="outline" size="sm">
             Startups
           </Button>
           <Button variant="outline" size="sm">
-            Investigación
+            Research
           </Button>
         </div>
       </div>
@@ -128,7 +128,7 @@ export default function TecnologiaPage() {
                   {news.trend === "trending" && (
                     <Badge variant="secondary" className="bg-red-500 text-white">
                       <TrendingUp className="h-3 w-3 mr-1" />
-                      Tendencia
+                      Trending
                     </Badge>
                   )}
                 </div>
@@ -166,7 +166,7 @@ export default function TecnologiaPage() {
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-purple-600">{news.source}</span>
                   <Button size="sm" variant="outline" className="hover:bg-purple-50 bg-transparent">
-                    Leer más
+                    Read more
                   </Button>
                 </div>
               </CardContent>
@@ -177,7 +177,7 @@ export default function TecnologiaPage() {
         {/* Load More */}
         <div className="text-center mt-12">
           <Button size="lg" variant="outline" className="px-8 bg-transparent">
-            Cargar más noticias
+            Load more news
           </Button>
         </div>
       </div>

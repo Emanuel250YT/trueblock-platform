@@ -49,9 +49,9 @@ export function MainNav() {
               <Calendar className="h-3 w-3 text-blue-600" />
               <span className="text-xs">
                 {locationLoading
-                  ? "Cargando fecha..."
+                  ? "Loading date..."
                   : location?.currentDate ||
-                  new Date().toLocaleDateString("es-ES", {
+                  new Date().toLocaleDateString("en-US", {
                     weekday: "long",
                     year: "numeric",
                     month: "long",
@@ -65,13 +65,13 @@ export function MainNav() {
                 {locationLoading
                   ? "--:--"
                   : location?.currentTime ||
-                  new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })}
+                  new Date().toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit" })}
               </span>
             </div>
             <div className="hidden sm:flex items-center space-x-2">
               <MapPin className="h-3 w-3 text-green-600" />
               <span className="text-xs">
-                {locationLoading ? "Ubicación..." : `${location?.city}, ${location?.country}` || "Tu Ciudad"}
+                {locationLoading ? "Location..." : `${location?.city}, ${location?.country}` || "Your City"}
               </span>
             </div>
             <div className="hidden md:flex items-center space-x-2">
@@ -90,7 +90,7 @@ export function MainNav() {
           <div className="hidden md:block">
             <div className="bg-gradient-to-r from-blue-50 to-green-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium flex items-center space-x-1">
               <CheckCircle className="h-3 w-3 text-green-600" />
-              <span>Noticias Verificadas con Blockchain</span>
+              <span>Blockchain-Verified News</span>
             </div>
           </div>
         </div>
@@ -105,7 +105,7 @@ export function MainNav() {
             <div className="flex flex-col">
               <span className="font-bold text-xl text-blue-600">TrueBlock</span>
               <span className="text-xs text-gray-500 hidden sm:block">
-                {isConnected ? `Conectado: ${address?.slice(0, 6)}...${address?.slice(-4)}` : "Noticias Verificadas"}
+                {isConnected ? `Connected: ${address?.slice(0, 6)}...${address?.slice(-4)}` : "Verified News"}
               </span>
             </div>
           </Link>
@@ -116,7 +116,7 @@ export function MainNav() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
               <Input
                 type="search"
-                placeholder="Buscar en TrueBlock Noticias"
+                placeholder="Search TrueBlock News"
                 className="pl-10 pr-4 py-2 w-full border-gray-200 focus:border-blue-500 focus:ring-blue-500 bg-white/80 backdrop-blur-sm"
               />
             </div>
@@ -132,7 +132,7 @@ export function MainNav() {
                   pathname === "/" ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-700",
                 )}
               >
-                Inicio
+                Home
               </Link>
 
               <Link
@@ -142,15 +142,15 @@ export function MainNav() {
                   pathname === "/verificadas" ? "text-blue-600 border-b-2 border-blue-600" : "text-gray-700",
                 )}
               >
-                Verificadas
+                Verified
               </Link>
 
-              {/* Validación Dropdown */}
+              {/* Validation Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-2">
                     <Shield className="h-4 w-4 mr-1" />
-                    Validación
+                    Validation
                     <ChevronDown className="h-3 w-3 ml-1" />
                   </Button>
                 </DropdownMenuTrigger>
@@ -165,7 +165,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">📝</span>
-                        <span>Enviar para Validar</span>
+                        <span>Submit for Validation</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -177,7 +177,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">🗳️</span>
-                        <span>Votar</span>
+                        <span>Vote</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -189,7 +189,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">👥</span>
-                        <span>Validadores</span>
+                        <span>Validators</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -201,7 +201,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">🤖</span>
-                        <span>Oráculos IA</span>
+                        <span>AI Oracles</span>
                       </Link>
                     </DropdownMenuItem>
                   </div>
@@ -218,12 +218,12 @@ export function MainNav() {
                 Staking
               </Link>
 
-              {/* Categorías Dropdown */}
+              {/* Categories Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="text-sm font-medium text-gray-700 hover:text-blue-600 px-3 py-2">
                     <Newspaper className="h-4 w-4 mr-1" />
-                    Categorías
+                    Categories
                     <ChevronDown className="h-3 w-3 ml-1" />
                   </Button>
                 </DropdownMenuTrigger>
@@ -238,7 +238,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">🏛️</span>
-                        <span>Política</span>
+                        <span>Politics</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -250,7 +250,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">💰</span>
-                        <span>Economía</span>
+                        <span>Economy</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -262,7 +262,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">⚽</span>
-                        <span>Deportes</span>
+                        <span>Sports</span>
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
@@ -274,7 +274,7 @@ export function MainNav() {
                         )}
                       >
                         <span className="text-lg">💻</span>
-                        <span>Tecnología</span>
+                        <span>Technology</span>
                       </Link>
                     </DropdownMenuItem>
                   </div>
@@ -287,7 +287,7 @@ export function MainNav() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="hidden lg:flex items-center space-x-1">
                   <User className="h-4 w-4" />
-                  <span className="text-sm">{isConnected ? "Perfil" : "Cuenta"}</span>
+                  <span className="text-sm">{isConnected ? "Profile" : "Account"}</span>
                   <ChevronDown className="h-3 w-3" />
                 </Button>
               </DropdownMenuTrigger>
@@ -295,7 +295,7 @@ export function MainNav() {
                 {isConnected ? (
                   <>
                     <div className="px-3 py-2 text-sm">
-                      <div className="font-medium text-gray-900">Wallet Conectada</div>
+                      <div className="font-medium text-gray-900">Wallet Connected</div>
                       <div className="text-xs text-gray-500 font-mono">
                         {address?.slice(0, 6)}...{address?.slice(-4)}
                       </div>
@@ -304,18 +304,18 @@ export function MainNav() {
                     <DropdownMenuItem asChild>
                       <Link href={`/perfil/${address}`} className="flex items-center">
                         <User className="h-4 w-4 mr-2" />
-                        Mi Perfil
+                        My Profile
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
                       <Link href="/perfil/anonimo" className="flex items-center">
                         <Shield className="h-4 w-4 mr-2" />
-                        Perfil Anónimo
+                        Anonymous Profile
                       </Link>
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={disconnectWallet} className="text-red-600">
                       <Wallet className="h-4 w-4 mr-2" />
-                      Desconectar Wallet
+                      Disconnect Wallet
                     </DropdownMenuItem>
                   </>
                 ) : (
@@ -323,7 +323,7 @@ export function MainNav() {
                     <DropdownMenuItem asChild>
                       <Link href="/auth" className="flex items-center">
                         <User className="h-4 w-4 mr-2" />
-                        Iniciar Sesión
+                        Sign In
                       </Link>
                     </DropdownMenuItem>
                   </>
@@ -332,13 +332,13 @@ export function MainNav() {
                 <DropdownMenuItem asChild>
                   <Link href="/acerca-de" className="flex items-center">
                     <HelpCircle className="h-4 w-4 mr-2" />
-                    Acerca de
+                    About
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link href="/contacto" className="flex items-center">
                     <Settings className="h-4 w-4 mr-2" />
-                    Contacto
+                    Contact
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -357,7 +357,7 @@ export function MainNav() {
               )}
             >
               <Wallet className="h-4 w-4" />
-              <span>{walletLoading ? "Conectando..." : isConnected ? "Conectada" : "Conectar Wallet"}</span>
+              <span>{walletLoading ? "Connecting..." : isConnected ? "Connected" : "Connect Wallet"}</span>
               {isConnected && <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse"></div>}
             </Button>
 
@@ -374,7 +374,7 @@ export function MainNav() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
             <Input
               type="search"
-              placeholder="Buscar noticias..."
+              placeholder="Search news..."
               className="pl-10 pr-4 py-2 w-full border-gray-200 focus:border-blue-500 focus:ring-blue-500"
             />
           </div>
@@ -394,7 +394,7 @@ export function MainNav() {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                🏠 Inicio
+                🏠 Home
               </Link>
               <Link
                 href="/verificadas"
@@ -404,7 +404,7 @@ export function MainNav() {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                ✅ Verificadas
+                ✅ Verified
               </Link>
               <Link
                 href="/submit"
@@ -414,7 +414,7 @@ export function MainNav() {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                📝 Enviar para Validar
+                📝 Submit for Validation
               </Link>
               <Link
                 href="/vote"
@@ -424,7 +424,7 @@ export function MainNav() {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                🗳️ Votar
+                🗳️ Vote
               </Link>
               <Link
                 href="/validators"
@@ -434,7 +434,7 @@ export function MainNav() {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                👥 Validadores
+                👥 Validators
               </Link>
               <Link
                 href="/oracles"
@@ -444,7 +444,7 @@ export function MainNav() {
                 )}
                 onClick={() => setIsMenuOpen(false)}
               >
-                🤖 Oráculos IA
+                🤖 AI Oracles
               </Link>
               <Link
                 href="/staking"
@@ -459,7 +459,7 @@ export function MainNav() {
             </div>
 
             <div className="border-t pt-4">
-              <div className="text-xs font-medium text-gray-500 mb-2">CATEGORÍAS</div>
+              <div className="text-xs font-medium text-gray-500 mb-2">CATEGORIES</div>
               <div className="space-y-2">
                 <Link
                   href="/politica"
@@ -469,7 +469,7 @@ export function MainNav() {
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  🏛️ Política
+                  🏛️ Politics
                 </Link>
                 <Link
                   href="/economia"
@@ -479,7 +479,7 @@ export function MainNav() {
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  💰 Economía
+                  💰 Economy
                 </Link>
                 <Link
                   href="/deportes"
@@ -489,7 +489,7 @@ export function MainNav() {
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  ⚽ Deportes
+                  ⚽ Sports
                 </Link>
                 <Link
                   href="/tecnologia"
@@ -499,7 +499,7 @@ export function MainNav() {
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  💻 Tecnología
+                  💻 Technology
                 </Link>
               </div>
             </div>
@@ -507,23 +507,23 @@ export function MainNav() {
             <div className="border-t pt-4">
               {isConnected ? (
                 <div className="space-y-2">
-                  <div className="text-xs font-medium text-gray-500 mb-2">CUENTA</div>
+                  <div className="text-xs font-medium text-gray-500 mb-2">ACCOUNT</div>
                   <div className="text-sm text-gray-600 mb-2">
-                    Conectado: {address?.slice(0, 6)}...{address?.slice(-4)}
+                    Connected: {address?.slice(0, 6)}...{address?.slice(-4)}
                   </div>
                   <Link
                     href={`/perfil/${address}`}
                     className="block py-2 text-sm text-gray-700 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    👤 Mi Perfil
+                    👤 My Profile
                   </Link>
                   <Link
                     href="/perfil/anonimo"
                     className="block py-2 text-sm text-gray-700 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    🔒 Perfil Anónimo
+                    🔒 Anonymous Profile
                   </Link>
                   <button
                     onClick={() => {
@@ -532,7 +532,7 @@ export function MainNav() {
                     }}
                     className="block w-full text-left py-2 text-sm text-red-600 hover:text-red-700"
                   >
-                    💸 Desconectar Wallet
+                    💸 Disconnect Wallet
                   </button>
                 </div>
               ) : (
@@ -546,14 +546,14 @@ export function MainNav() {
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white"
                   >
                     <Wallet className="h-4 w-4 mr-2" />
-                    {walletLoading ? "Conectando..." : "Conectar Wallet"}
+                    {walletLoading ? "Connecting..." : "Connect Wallet"}
                   </Button>
                   <Link
                     href="/auth"
                     className="block py-2 text-sm text-gray-700 hover:text-blue-600"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    👤 Iniciar Sesión
+                    👤 Sign In
                   </Link>
                 </div>
               )}
@@ -566,14 +566,14 @@ export function MainNav() {
                   className="block py-2 text-sm text-gray-700 hover:text-blue-600"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  ❓ Acerca de
+                  ❓ About
                 </Link>
                 <Link
                   href="/contacto"
                   className="block py-2 text-sm text-gray-700 hover:text-blue-600"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  📧 Contacto
+                  📧 Contact
                 </Link>
               </div>
             </div>

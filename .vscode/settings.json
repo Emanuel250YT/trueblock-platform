@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    ".env": "env",
+    ".env*": "env",
+    "*.env.development": "env",
+    "*.env.production": "env",
+    "trusp": "c"
+  }
+}
